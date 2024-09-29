@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulund High School - Attendance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensure the image stays in the background */
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Make the background slightly transparent */
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: absolute; /* Make the form stay in the center of the page */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <!-- Replace the src with the actual path of your image -->
+        <img src="background.jpg" alt="School Image" class="background-image">
+
+        <div class="form-container">
+            <h1>Welcome</h1>
+            <h2>Mulund High School</h2>
+            <form>
+                <input type="text" placeholder="Enrollment / Employee No." required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign In</button>
+                <a href="forgetpassword.html">Forgot Password?</a>             
+                <!-- <a href="#">Forgot Password?</a> -->
+            </form>
+        </div>
+    </div>
+    <script>
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent   default form submission
+
+            // Perform login validation here (e.g., check credentials against a database)
+
+            // If login is successful, redirect to Dashboard.html
+            window.location.href = 'Dashboard.html';
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
